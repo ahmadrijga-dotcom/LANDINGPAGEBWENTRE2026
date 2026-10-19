@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bintang Waktu — Sekolah Montessori Islami untuk Anak SD dengan Daycare</title>
+<meta name="description" content="Sekolah Montessori Islami dengan daycare untuk anak usia SD (6-12 tahun). Belajar sesuai fitrah, aman sampai sore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#2E9E5B; --green-d:#1F7A44; --green-l:#E5F5EC;
+  --teal:#17A9A3; --teal-d:#0E7F7A; --teal-l:#DFF5F3;
+  --orange:#F58220; --orange-d:#D96A0C; --orange-l:#FFEBD7;
+  --yellow:#FFC93C; --yellow-l:#FFF5D6;
+  --white:#FFFFFF; --ink:#1B3A36; --muted:#51706B; --line:#D5E7E3; --bg:#FBFEFD;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Fredoka',sans-serif;line-height:1.15;color:var(--ink)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.eyebrow{display:inline-block;font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-d);background:var(--teal-l);padding:6px 12px;border-radius:99px;margin-bottom:14px}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:640px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.05rem;text-decoration:none;padding:14px 24px;border-radius:99px;border:2px solid transparent;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 6px 0 var(--orange-d)}
+.btn-primary:hover{box-shadow:0 8px 0 var(--orange-d)}
+.btn-ghost{background:#fff;color:var(--teal-d);border-color:var(--teal)}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+
+/* NAV */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.logo svg{width:38px;height:38px}
+.logo b{font-family:'Fredoka';font-size:1.35rem;color:var(--teal-d);font-weight:600;line-height:1}
+.logo small{display:block;font-size:.62rem;color:var(--orange-d);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav a{text-decoration:none;font-weight:700;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--green-d)}
+nav .btn{padding:9px 18px;font-size:.95rem;box-shadow:none;color:#fff}
+
+/* HERO */
+.hero{background:linear-gradient(180deg,var(--teal-l) 0%,#fff 100%);padding:64px 0 40px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero h1 span{background:linear-gradient(transparent 62%,var(--yellow) 62%)}
+.hero p.sub{font-size:1.15rem;color:var(--muted);margin-bottom:26px;max-width:540px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{position:relative;aspect-ratio:1/1;max-width:440px;margin-left:auto;width:100%}
+.blob{position:absolute;border-radius:50%}
+.b1{inset:6% 6% 6% 6%;background:var(--green-l);border:3px dashed var(--green)}
+.b2{width:34%;height:34%;right:0;top:2%;background:var(--yellow)}
+.b3{width:22%;height:22%;left:0;bottom:12%;background:var(--orange)}
+.card-float{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;box-shadow:0 10px 30px rgba(14,127,122,.18);font-weight:800;font-size:.92rem;display:flex;gap:10px;align-items:center}
+.card-float i{font-style:normal;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:1.05rem}
+.cf1{left:-4%;top:20%}.cf1 i{background:var(--green-l)}
+.cf2{right:-2%;top:52%}.cf2 i{background:var(--orange-l)}
+.cf3{left:12%;bottom:2%}.cf3 i{background:var(--teal-l)}
+.hero-star{position:absolute;inset:0;display:grid;place-items:center}
+.hero-star svg{width:46%;filter:drop-shadow(0 8px 0 rgba(31,122,68,.15))}
+
+/* TRUST */
+.trust{padding:0;margin-top:8px}
+.trust-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;background:#fff;border:2px solid var(--line);border-radius:22px;padding:18px}
+.trust-item{text-align:center;padding:6px 8px}
+.trust-item b{display:block;font-family:'Fredoka';font-size:1.25rem;color:var(--teal-d)}
+.trust-item span{font-size:.85rem;color:var(--muted);font-weight:600}
+
+/* PROBLEM / KENAPA */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.why{background:#fff;border:2px solid var(--line);border-radius:22px;padding:24px}
+.why.bad{background:var(--orange-l);border-color:#F9CFA4}
+.why.good{background:var(--green-l);border-color:#BFE3CE}
+.why h3{font-size:1.25rem;margin-bottom:10px}
+.why ul{list-style:none;display:grid;gap:8px}
+.why li{padding-left:28px;position:relative;font-weight:600}
+.why.bad li::before{content:"✕";position:absolute;left:0;color:var(--orange-d);font-weight:800}
+.why.good li::before{content:"✓";position:absolute;left:0;color:var(--green-d);font-weight:800}
+
+/* COMPARE */
+.compare{background:var(--yellow-l)}
+.table-scroll{overflow-x:auto;margin-top:28px;border-radius:20px;border:2px solid #F3DD93;background:#fff}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th,td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);font-size:.95rem}
+th{font-family:'Fredoka';font-weight:600;background:#fff;font-size:1rem}
+th.bw,td.bw{background:var(--green-l);font-weight:800;color:var(--green-d)}
+th.bw{background:var(--green);color:#fff}
+tr:last-child td{border-bottom:none}
+td:first-child{font-weight:800}
+.note{font-size:.85rem;color:var(--muted);margin-top:10px}
+
+/* FITRAH */
+.fitrah-box{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.quote{background:var(--teal);color:#fff;border-radius:28px;padding:34px;position:relative}
+.quote p{font-family:'Fredoka';font-size:1.5rem;line-height:1.3}
+.quote small{display:block;margin-top:14px;opacity:.9;font-weight:700}
+.steps{display:grid;gap:14px}
+.step{display:flex;gap:14px;align-items:flex-start;background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px}
+.step b.n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-family:'Fredoka';font-size:1.1rem}
+.step h3{font-size:1.05rem;margin-bottom:2px}
+.step p{font-size:.93rem;color:var(--muted)}
+
+/* PROGRAMS */
+.programs{background:linear-gradient(180deg,#fff,var(--green-l))}
+.prog-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}
+.prog{background:#fff;border-radius:22px;padding:20px 16px;border:2px solid var(--line);display:flex;flex-direction:column;gap:6px;position:relative}
+.prog .age{font-weight:800;font-size:.8rem;color:#fff;background:var(--teal);border-radius:99px;padding:3px 10px;align-self:flex-start}
+.prog h3{font-size:1.15rem}
+.prog p{font-size:.9rem;color:var(--muted)}
+.prog.sd{border-color:var(--orange);background:#fff;box-shadow:0 8px 0 var(--orange-l)}
+.prog.sd .age{background:var(--orange)}
+.prog .tag{position:absolute;top:-12px;right:12px;background:var(--yellow);font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:99px}
+.prog-note{margin-top:16px;font-size:.88rem;color:var(--muted)}
+
+/* DAY */
+.day{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:30px}
+.slot{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px;border-top:6px solid var(--teal)}
+.slot:nth-child(3n+1){border-top-color:var(--green)}
+.slot:nth-child(3n+2){border-top-color:var(--orange)}
+.slot time{font-family:'Fredoka';font-weight:600;color:var(--teal-d);font-size:1.05rem}
+.slot h3{font-size:1rem;margin:2px 0}
+.slot p{font-size:.86rem;color:var(--muted)}
+
+/* PROOF */
+.proof{background:var(--teal-l)}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.ph{background:#fff;border:2px dashed var(--teal);border-radius:20px;padding:24px;color:var(--muted);font-weight:600;text-align:center;min-height:150px;display:grid;place-items:center}
+
+/* LOCATION */
+.tabs{display:inline-flex;background:#fff;border:2px solid var(--line);border-radius:99px;padding:4px;margin:20px 0 18px}
+.tabs button{font-family:'Fredoka';font-size:1rem;font-weight:600;border:0;background:transparent;padding:10px 24px;border-radius:99px;cursor:pointer;color:var(--muted)}
+.tabs button[aria-selected="true"]{background:var(--green);color:#fff}
+.loc{display:none;background:#fff;border:2px solid var(--line);border-radius:24px;padding:28px;gap:24px;grid-template-columns:1.2fr 1fr}
+.loc.on{display:grid}
+.loc h3{font-size:1.4rem;margin-bottom:8px}
+.loc dl{display:grid;gap:10px;margin-top:10px}
+.loc dt{font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--teal-d)}
+.loc dd{font-weight:600}
+.loc .side{background:var(--yellow-l);border-radius:18px;padding:20px;align-self:start}
+.loc .side p{font-size:.93rem;margin-bottom:14px}
+
+/* FINAL CTA */
+.final{background:var(--green);color:#fff;text-align:center;border-radius:32px;padding:54px 24px;margin:0 20px}
+.final h2{color:#fff}
+.final p{max-width:560px;margin:0 auto 24px;opacity:.95}
+.final .btn-primary{background:var(--yellow);color:var(--ink);box-shadow:0 6px 0 #D9A416}
+
+footer{padding:36px 0 44px;text-align:center;color:var(--muted);font-size:.88rem}
+footer .proto{display:inline-block;margin-top:10px;background:var(--yellow-l);border:1px solid #F3DD93;border-radius:12px;padding:8px 14px;font-weight:700;color:var(--ink)}
+
+@media (max-width:900px){
+  section{padding:54px 0}
+  .hero-grid,.fitrah-box,.why-grid,.loc{grid-template-columns:1fr}
+  .hero-art{margin:10px auto 0;max-width:320px}
+  .trust-row{grid-template-columns:repeat(2,1fr)}
+  .prog-grid{grid-template-columns:1fr 1fr}
+  .proof-grid{grid-template-columns:1fr}
+  nav ul li:not(:last-child){display:none}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .prog-grid{grid-template-columns:1fr}
+  .final{margin:0 12px}
+  .tabs button{padding:9px 16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo" aria-label="Bintang Waktu">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l7.6 17.2 18.7 1.8-14.1 12.5 4.2 18.4L32 43.8 15.6 53.9l4.2-18.4L5.7 23l18.7-1.8z" fill="#FFC93C"/><path d="M10 40q22 14 44-4" stroke="#17A9A3" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M14 48q18 8 36-2" stroke="#2E9E5B" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+      <span><b>bintang waktu</b><small>Montessori</small></span>
+    </a>
+    <nav aria-label="Menu utama">
+      <ul>
+        <li><a href="#beda">Bedanya BW</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#sehari">Sehari di BW</a></li>
+        <li><a href="#lokasi">Lokasi</a></li>
+        <li><a class="btn btn-primary" href="https://wa.me/6282246481588?text=Halo%20Bintang%20Waktu%2C%20saya%20ingin%20tahu%20tentang%20program%20SD." target="_blank" rel="noopener">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Terakreditasi A · Montessori · Islami</span>
+      <h1>Sekolah <em>Montessori Islami</em> untuk anak SD, <span>dengan daycare sampai sore</span></h1>
+      <p class="sub">Anak belajar sesuai fitrahnya dan tumbuh mandiri. Orang tua tenang bekerja, karena anak tetap terjaga sampai pukul 18.00.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://wa.me/6282246481588?text=Halo%20Bintang%20Waktu%2C%20saya%20ingin%20menjadwalkan%20kunjungan." target="_blank" rel="noopener">Jadwalkan Kunjungan</a>
+        <a class="btn btn-ghost" href="#program">Lihat Program</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+      <div class="hero-star"><svg viewBox="0 0 64 64"><path d="M32 4l7.6 17.2 18.7 1.8-14.1 12.5 4.2 18.4L32 43.8 15.6 53.9l4.2-18.4L5.7 23l18.7-1.8z" fill="#FFC93C"/></svg></div>
+      <div class="card-float cf1"><i>🌱</i>Belajar sesuai fitrah</div>
+      <div class="card-float cf2"><i>🕌</i>Nilai Islam</div>
+      <div class="card-float cf3"><i>🕕</i>Aman sampai 18.00</div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<div class="wrap trust">
+  <div class="trust-row">
+    <div class="trust-item"><b>Akreditasi A</b><span>Terakreditasi</span></div>
+    <div class="trust-item"><b>07.00–18.00</b><span>Senin–Jumat</span></div>
+    <div class="trust-item"><b>3x makan + snack</b><span>Setiap hari</span></div>
+    <div class="trust-item"><b>CCTV</b><span>Pemantauan</span></div>
+    <div class="trust-item"><b>Ekskul</b><span>Kegiatan tambahan</span></div>
+  </div>
+</div>
+
+<!-- KENAPA -->
+<section id="kenapa">
+  <div class="wrap">
+    <span class="eyebrow">Untuk orang tua bekerja</span>
+    <h2>Tidak perlu memilih antara sekolah yang baik dan tempat yang aman</h2>
+    <p class="lead">Banyak orang tua harus mengatur sekolah SD di satu tempat dan penitipan di tempat lain. Di BW, keduanya ada di satu tempat.</p>
+    <div class="why-grid">
+      <div class="why bad">
+        <h3>Biasanya</h3>
+        <ul>
+          <li>Sekolah selesai siang, anak harus dititipkan di tempat lain</li>
+          <li>Anak hanya "dijagain", belajarnya tidak terlihat</li>
+          <li>Sulit tahu tempat mana yang benar-benar peduli</li>
+        </ul>
+      </div>
+      <div class="why good">
+        <h3>Di Bintang Waktu</h3>
+        <ul>
+          <li>Belajar Montessori dan pengasuhan sampai sore di satu tempat</li>
+          <li>Anak didampingi tumbuh mandiri dan percaya diri</li>
+          <li>Nilai Islam dikenalkan sejak dini dalam keseharian</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEDA -->
+<section id="beda" class="compare">
+  <div class="wrap">
+    <span class="eyebrow">Apa bedanya?</span>
+    <h2>BW bukan sekadar tempat menitipkan anak</h2>
+    <p class="lead">Perbandingan singkat untuk membantu orang tua memahami posisi BW.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th></th><th>Penitipan anak</th><th>Preschool / PAUD</th><th>SD biasa</th><th class="bw">Bintang Waktu</th></tr></thead>
+        <tbody>
+          <tr><td>Fokus utama</td><td>Menjaga anak</td><td>Belajar usia dini</td><td>Kurikulum akademik</td><td class="bw">Belajar + tumbuh sesuai fitrah</td></tr>
+          <tr><td>Usia SD (6–12 th)</td><td>Jarang</td><td>Tidak</td><td>Ya</td><td class="bw">Ya</td></tr>
+          <tr><td>Metode</td><td>Beragam</td><td>Beragam</td><td>Klasikal</td><td class="bw">Montessori</td></tr>
+          <tr><td>Nilai Islam</td><td>Tergantung tempat</td><td>Tergantung tempat</td><td>Tergantung sekolah</td><td class="bw">Ya, diintegrasikan</td></tr>
+          <tr><td>Jam pengasuhan sore</td><td>Ya</td><td>Terbatas</td><td>Biasanya tidak</td><td class="bw">Sampai 18.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">*Gambaran umum untuk membantu memahami perbedaan. Kondisi tiap sekolah dapat berbeda.</p>
+  </div>
+</section>
+
+<!-- FITRAH -->
+<section id="fitrah">
+  <div class="wrap fitrah-box">
+    <div class="quote">
+      <p>Setiap anak lahir dengan potensi dan kecenderungan baiknya sendiri. Tugas kami mendampingi anak menemukannya.</p>
+      <small>Belajar sesuai fitrah, dengan nilai-nilai Islam</small>
+    </div>
+    <div>
+      <span class="eyebrow">Apa itu fitrah?</span>
+      <h2>Tumbuh menjadi yang terbaik bagi dirinya sendiri</h2>
+      <div class="steps">
+        <div class="step"><b class="n">1</b><div><h3>Anak memilih kegiatan</h3><p>Anak bebas memilih aktivitas belajar sesuai minatnya, dengan bimbingan guru.</p></div></div>
+        <div class="step"><b class="n">2</b><div><h3>Guru mendampingi</h3><p>Guru mengamati dan membantu pada saat yang tepat, tidak terlalu cepat dan tidak terlalu lambat.</p></div></div>
+        <div class="step"><b class="n">3</b><div><h3>Karakter dan iman tumbuh</h3><p>Mandiri, percaya diri, cinta ilmu, dan menghargai perbedaan dalam bingkai nilai Islam.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program" class="programs">
+  <div class="wrap">
+    <span class="eyebrow">Program</span>
+    <h2>Dari bayi sampai SD, tumbuh di satu rumah belajar</h2>
+    <p class="lead">Anak bisa mulai sejak bayi dan melanjutkan hingga SD tanpa harus berpindah-pindah tempat.</p>
+    <div class="prog-grid">
+      <div class="prog"><span class="age">2–18 bulan</span><h3>Baby Daycare</h3><p>Pengasuhan hangat dan stimulasi sesuai tahap bayi.</p></div>
+      <div class="prog"><span class="age">2–3 tahun</span><h3>Kelas Bintang Kecil</h3><p>Mengenal rutinitas, bahasa, dan kemandirian dasar.</p></div>
+      <div class="prog"><span class="age">3–6 tahun</span><h3>Kelas Bintang Besar</h3><p>Jenjang TK. Belajar lewat bahan Montessori dan bermain.</p></div>
+      <div class="prog sd"><span class="tag">SD</span><span class="age">Kelas 1–3 SD</span><h3>Kelas Komet Kecil</h3><p>Mulai belajar mandiri dengan tantangan akademik yang sesuai.</p></div>
+      <div class="prog sd"><span class="tag">SD</span><span class="age">Kelas 4–6 SD*</span><h3>Kelas Komet Besar</h3><p>Pendalaman, tanggung jawab, dan persiapan ke jenjang berikutnya.</p></div>
+    </div>
+    <p class="prog-note">*Rentang kelas Komet Besar perlu dikonfirmasi dengan pihak BW sebelum dipublikasikan.</p>
+  </div>
+</section>
+
+<!-- SEHARI -->
+<section id="sehari">
+  <div class="wrap">
+    <span class="eyebrow">Sehari di BW</span>
+    <h2>Dari pagi sampai sore, anak belajar dan terjaga</h2>
+    <p class="lead">Contoh alur hari untuk anak SD. Jadwal ini ilustrasi dan perlu disesuaikan dengan jadwal asli BW.</p>
+    <div class="day">
+      <div class="slot"><time>07.00</time><h3>Datang</h3><p>Disambut guru, memulai hari dengan tenang.</p></div>
+      <div class="slot"><time>08.00</time><h3>Belajar Montessori</h3><p>Memilih kegiatan dan bekerja mandiri.</p></div>
+      <div class="slot"><time>12.00</time><h3>Makan &amp; ibadah</h3><p>Makan siang dan salat bersama.</p></div>
+      <div class="slot"><time>14.00</time><h3>Ekstrakurikuler</h3><p>Kegiatan pilihan dan bermain.</p></div>
+      <div class="slot"><time>16.00</time><h3>Snack &amp; santai</h3><p>Istirahat dan kegiatan ringan.</p></div>
+      <div class="slot"><time>18.00</time><h3>Dijemput</h3><p>Anak pulang, orang tua selesai bekerja.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUKTI -->
+<section class="proof">
+  <div class="wrap">
+    <span class="eyebrow">Cerita orang tua</span>
+    <h2>Dengar langsung dari orang tua BW</h2>
+    <p class="lead">Bagian ini disiapkan untuk testimoni nyata dan foto kegiatan anak dari BW.</p>
+    <div class="proof-grid">
+      <div class="ph">[ Testimoni orang tua 1 ]</div>
+      <div class="ph">[ Testimoni orang tua 2 ]</div>
+      <div class="ph">[ Foto / video kegiatan anak SD ]</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOKASI -->
+<section id="lokasi">
+  <div class="wrap">
+    <span class="eyebrow">Lokasi</span>
+    <h2>Temukan Bintang Waktu terdekat</h2>
+    <p class="lead">Bintang Waktu hadir di Jakarta dan Bandung.</p>
+    <div class="tabs" role="tablist" aria-label="Pilih kota">
+      <button role="tab" id="t-jkt" aria-selected="true" aria-controls="p-jkt">Jakarta</button>
+      <button role="tab" id="t-bdg" aria-selected="false" aria-controls="p-bdg">Bandung</button>
+    </div>
+
+    <div class="loc on" id="p-jkt" role="tabpanel" aria-labelledby="t-jkt">
+      <div>
+        <h3>Bintang Waktu Jakarta</h3>
+        <p>Daycare dan sekolah Montessori Islami: Baby, TK, hingga SD.</p>
+        <dl>
+          <div><dt>Alamat</dt><dd>Jl. Cempaka Putih Tengah 26A No. 21, Jakarta Pusat</dd></div>
+          <div><dt>Jam operasional</dt><dd>Senin–Jumat, 07.00–18.00</dd></div>
+          <div><dt>WhatsApp</dt><dd>0822-4648-1588</dd></div>
+          <div><dt>Instagram</dt><dd>@bintangwaktujakarta</dd></div>
+        </dl>
+      </div>
+      <div class="side">
+        <p><b>Ingin melihat langsung?</b><br>Jadwalkan kunjungan dan lihat bagaimana anak belajar di kelas.</p>
+        <a class="btn btn-primary" href="https://wa.me/6282246481588?text=Halo%20Bintang%20Waktu%20Jakarta%2C%20saya%20ingin%20menjadwalkan%20kunjungan." target="_blank" rel="noopener">Chat WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="loc" id="p-bdg" role="tabpanel" aria-labelledby="t-bdg">
+      <div>
+        <h3>Bintang Waktu Montessori Bandung</h3>
+        <p>Sekolah Montessori Bintang Waktu di Kota Bandung.</p>
+        <dl>
+          <div><dt>Alamat</dt><dd>Jl. Tengku Angkasa No. 26, Lebakgede, Kec. Coblong, Kota Bandung, Jawa Barat 40132</dd></div>
+          <div><dt>Telepon</dt><dd>(022) 2504818</dd></div>
+          <div><dt>Program</dt><dd>Hubungi sekolah untuk informasi program yang tersedia di Bandung.</dd></div>
+        </dl>
+      </div>
+      <div class="side">
+        <p><b>Program SD ada di Jakarta.</b><br>Untuk jenjang dan jadwal di Bandung, silakan hubungi sekolah langsung.</p>
+        <a class="btn btn-primary" href="tel:+62222504818">Telepon Bandung</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="final">
+  <h2>Anak belajar dengan baik, orang tua tenang bekerja</h2>
+  <p>Hubungi kami untuk tanya program SD, jadwal kunjungan, atau simulasi kelas.</p>
+  <a class="btn btn-primary" href="https://wa.me/6282246481588?text=Halo%20Bintang%20Waktu%2C%20saya%20ingin%20tahu%20tentang%20program%20SD." target="_blank" rel="noopener">Tanya Program SD</a>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© Bintang Waktu · Jl. Cempaka Putih Tengah 26A No. 21, Jakarta Pusat</p>
+    <span class="proto">Prototipe konsep untuk tugas Design Thinking, bukan situs resmi Bintang Waktu.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tabs [role=tab]');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){
+        var on=x===t;
+        x.setAttribute('aria-selected',on);
+        document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
